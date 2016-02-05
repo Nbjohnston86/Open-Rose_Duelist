@@ -45,6 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\ParsableEnum.cs" />
+    <Compile Include="Internal\Interfaces\ICard.cs" />
+    <Compile Include="Internal\Interfaces\IFusable.cs" />
+    <Compile Include="Internal\Models\Card.cs" />
     <Compile Include="RoseParser.cs" />
     <Compile Include="Interfaces\IRoseParser.cs" />
     <Compile Include="Interfaces\IRoseParsable.cs" />
