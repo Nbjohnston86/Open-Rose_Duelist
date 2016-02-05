@@ -44,7 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Enums\ParsableEnum.cs" />
+    <Compile Include="RoseParser.cs" />
+    <Compile Include="Interfaces\IRoseParser.cs" />
+    <Compile Include="Interfaces\IRoseParsable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
