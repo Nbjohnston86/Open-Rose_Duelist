@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Parser.BusinessLogic.Internal.Interfaces
 {
     /// <summary>
-    /// The interface to user when parsing into a JSON object. Generalized as much as possible, 
+    /// The interface to user when parsing into a JSON object. Generalized as much as possible,
     /// the point isn't to make a usable class, but a readable/parsable class. Anyone should be
     /// able to design their own classes for these based upon this format.
     /// </summary>

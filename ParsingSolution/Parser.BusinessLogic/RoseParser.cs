@@ -8,6 +8,10 @@ using Parser.BusinessLogic.Enums;
 
 namespace Parser.BusinessLogic
 {
+    /// <summary>
+    /// Parses a rose card document based upon it's formatting style.
+    /// </summary>
+    /// <seealso cref="Parser.BusinessLogic.Interfaces.IRoseParser" />
     public class RoseParser : IRoseParser
     {
         public string ConvertToJson(IRoseParsable content)
