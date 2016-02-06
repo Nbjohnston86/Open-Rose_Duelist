@@ -53,7 +53,7 @@ namespace Parser.BusinessLogic
             throw new NotImplementedException();
         }
 
-        public string ConvertToJson(string content)
+        public string ConvertToJson(string filePath)
         {
             throw new NotImplementedException();
         }

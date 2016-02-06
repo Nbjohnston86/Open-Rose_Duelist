@@ -13,6 +13,6 @@ namespace Parser.BusinessLogic.Interfaces
     public interface IRoseParsable
     {
         ParsableEnum FileType { get; set; }
-        string CardList { get; set; }
+        string FilePath { get; set; }
     }
 }

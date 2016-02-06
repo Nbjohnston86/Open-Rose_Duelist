@@ -14,7 +14,7 @@ namespace Parser.BusinessLogic.Interfaces
     /// </summary>
     public interface IRoseParser
     {
-        string ConvertToJson(string content);
+        string ConvertToJson(string filePath);
         string ConvertToJson(IRoseParsable content);
     }
 }
