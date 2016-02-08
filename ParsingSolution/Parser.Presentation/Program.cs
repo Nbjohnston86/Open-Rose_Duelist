@@ -16,6 +16,8 @@ namespace Parser.Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
+            //Inversion of Control container objects here.
             Application.Run(new FileDialog());
         }
     }

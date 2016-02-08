@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Parser.BusinessLogic.Interfaces;
 using Parser.BusinessLogic.Enums;
+using System.Text.RegularExpressions;
+
 
 namespace Parser.BusinessLogic
 {
@@ -34,7 +36,7 @@ namespace Parser.BusinessLogic
             {
                 case ParsableEnum.Card:
                     //Dummy test data
-                    returnValue = content.FileType.ToString();
+                    returnValue = ParseCardsFromPath(content.FilePath).ToString();
                     break;
                 case ParsableEnum.Detail:
                     //Dummy test data
@@ -57,5 +59,30 @@ namespace Parser.BusinessLogic
         {
             throw new NotImplementedException();
         }
+
+        private IEnumerable<string> ParseCardsFromPath(string filePath)
+        {
+            //As a single string because text lines are not trustable.
+            string text = System.IO.File.ReadAllText(filePath);
+            const string regexPattern = @"\s+[\w]+\s+";
+            ICollection<string> output = new List<string>();
+
+            foreach (Match m in Regex.Matches(text, regexPattern))
+            {
+                if (!m.Success) continue;
+
+                var trimmed = Regex.Replace(m.Value, @"\s\s+", " ").Trim();
+                output.Add(m.Value);
+                Console.WriteLine("'{0}' found at index {1}.",
+                                  trimmed, m.Index);
+                //TODO: Parse the line for their individual components.
+            }
+
+            Console.WriteLine("'{0}' total cards parsed.", output.Count());
+
+            return output;
+        }
     }
+
+    
 }
